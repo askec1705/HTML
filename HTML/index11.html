@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <p id="demo"></p>
+                <button id="btnClick" class="btn btn-outline-warning">Click Me</button>
+
+            </div>
+        </div>
+    </div>
+    <!--console.log(items) uipath te output .net te writeline karşılığıdır.
+        getElementsByClassName() çoğul verir
+        -->
+    <script>
+        //var items = document.getElementsByClassName()
+        //console.log(items)
+
+
+        document.getElementById("btnClick")
+            .addEventListener("click",
+                function () {
+                    //alert("Hadi bi ara verelim!")
+                    document.getElementById("demo").innerHTML = "Bilge Adam JS Dersleri"; /*innerHTML Id si demo olanın etiket arası nı alır*/
+                })
+    </script>
+</body>
+</html>

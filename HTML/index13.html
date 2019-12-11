@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <style>
+        input{
+            font-size:40px!important; /*!important'ı bir kurali ezemiyorsak ezmek için kullanırız.*/ 
+            text-align:center!important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6 offset-3 border rounded pt-3 shadow">
+
+                <div class="btn-group btn-group-lg">
+                    <input type="text" class="form-control mr-2" value="" />
+                    <input type="text" class="form-control mr-2" value="" />
+                    <input type="text" class="form-control mr-2" value="" />
+                    <input type="text" class="form-control mr-2" value="" />
+                    <input type="text" class="form-control mr-2" value="" />
+                    <input type="text" class="form-control mr-2" value="" />
+                </div>
+
+                <div class="form-group mt-3">
+                    <button id="btn" class="btn btn-outline-dark btn-block">Çekiliş Yap</button>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        var sayilar = []; //dizi oluşturma
+        var index = 0;
+
+        document.getElementById("btn").addEventListener("click", function () {
+            // push() => sayilar[0] = sayi
+            // includes => contains
+            // timer => setInterval
+
+            var inputs = document.getElementsByTagName("input")
+            var timer = setInterval(function () {
+                var sayi = Math.floor(Math.random() * 50) + 1;
+
+
+                if (index < 10) {
+                    sayilar[0] = sayi;
+                    inputs[0].value = sayilar[0];
+                }
+                else if (index < 20) {
+                    if (sayilar.includes(sayi)) {
+                    index++;
+                    }
+                    else {
+                        sayilar[1] = sayi;
+                    inputs[1].value = sayilar[1];
+                    }
+                }
+                else if (index < 30) {
+                    if (sayilar.includes(sayi)) {
+                    index--;
+                    }
+                    else {
+                        sayilar[2] = sayi;
+                    inputs[2].value = sayilar[2];
+                    }
+                }
+                else if (index < 40) {
+                    if (sayilar.includes(sayi)) {
+                    index--;
+                    }
+                    else {
+                        sayilar[3] = sayi;
+                    inputs[3].value = sayilar[3];
+                    }
+                }
+                else if (index < 50) {
+                   if (sayilar.includes(sayi)) {
+                    index--;
+                    }
+                    else {
+                        sayilar[4] = sayi;
+                    inputs[4].value = sayilar[4];
+                    }
+                }
+                else if (index < 60) {
+                    if (sayilar.includes(sayi)) {
+                    index--;
+                    }
+                    else {
+                        sayilar[5] = sayi;
+                    inputs[5].value = sayilar[5];
+                    }
+                }
+
+                
+
+                if (index == 70) {
+                    clearInterval(timer);
+                }
+                index++;
+            }, 100);
+
+
+            console.log(sayilar);
+            })
+
+    </script>
+</body>
+</html>

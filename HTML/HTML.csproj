@@ -67,8 +67,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\main.css" />
     <Content Include="Index1.html" />
+    <Content Include="index10.html" />
+    <Content Include="index11.html" />
+    <Content Include="index12.html" />
+    <Content Include="index13.html" />
     <Content Include="index2.html" />
+    <Content Include="index3.html" />
+    <Content Include="index4.html" />
+    <Content Include="index5.html" />
+    <Content Include="index6.html" />
+    <Content Include="index7.html" />
+    <Content Include="index8.html" />
+    <Content Include="index9.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

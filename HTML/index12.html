@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <img id="resim" class="img-fluid img-thumbnail-shadow" src="img/itachi-sheaing-nicole-burnett.jpg" />
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("resim").addEventListener("click", function ()
+        {
+
+            var src = this.attributes["src"].value;
+            if (src.includes("itachi-sheaing-nicole-burnett"))
+            {
+                this.setAttribute("src","img/maxresdefault.jpg")
+            }
+            else
+            {
+                this.setAttribute("src","img/itachi-sheaing-nicole-burnett.jpg")
+            }
+        })
+</script>
+</body>
+</html>

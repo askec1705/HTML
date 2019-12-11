@@ -1,0 +1,71 @@
+﻿#container {
+    width : 1080px;
+    height: auto;
+    /*margin-left: 185px; herkesin ekranı aynı olmadığından manuel vermiyoruz*/ 
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#header{
+    width:1080px;
+    height:auto;
+    background-color: midnightblue;
+}
+
+#slider {
+    width: 1080px;
+    height: 300px;
+    background-color: rebeccapurple;
+    
+}
+
+#box{
+    width:1080px;
+    height:280px;
+    margin-top:10px;
+}
+
+#box .box {
+    width:350px;
+    height:280px;
+    background-color:darkorange;
+    float:left;
+    margin-right:15px;
+    border-radius:15px;
+}
+
+     #box .box:last-child{
+          margin-right: 0;
+     }
+
+#logo {
+    height:100px;
+}
+
+menu {
+    height: auto;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding : 0;
+    overflow : hidden;
+    background-color: #333;
+}
+
+#menu ul li {
+    float:left;
+}
+
+    #menu ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 14px;
+        text-decoration: none;
+    }
+
+    #menu ul li a:hover {
+        background-color:aqua
+    }

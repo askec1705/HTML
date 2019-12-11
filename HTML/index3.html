@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <table border="1" cellpadding="5" cellspacing="5">
+        <!-- excel tablosu verir, border tablo olarak ayırır, cellpadding iç boşluk verir,cellspacing iki çizgi arasındaki boşluğu verir. -->
+        <thead>
+            <!-- Başlık alanı -->
+            <tr>
+                <!-- table row - yeni bir satır -->
+                <th>
+                    <!-- Table Header - yeni bir hücre -->
+                    Ürün Adı
+                </th>
+                <th>
+                    Stok Adet
+                </th>
+                <th>
+                    Fiyat
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <!-- İçerik kısmı -->
+            <tr>
+                <td>
+                    <!-- table data -> thead ' de ki th yerine geçer aynı sayıda olmalıdır -->
+                    IPhone 11 ProMax
+                </td>
+                <td>
+                    10
+                </td>
+                <td>
+                    14.000 TL
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Samsung Note 10
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    9.000 TL
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Vestel Venüs
+                </td>
+                <td>
+                    90
+                </td>
+                <td>
+                    1.000 TL
+                </td>
+
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <!-- Alt Başlık -->
+            <tr>
+                <td colspan="2"> Toplam Tutar : </td>
+                <td>24.000 TL</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
