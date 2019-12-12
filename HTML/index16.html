@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        .metin {
+            width: 170px;
+            height: 150px;
+            -webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+            float: left;
+            margin-right: 12px;
+            border-radius: 10px;
+            line-height: 150px;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: large;
+        }
+
+        a{
+            width: 170px !important;
+            margin-right : 12px;
+        }
+    </style>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#bir").click(function () {
+                $(".metin").empty()
+                //$(".metin").html"" buda olur.
+                $("p[lang='tr']").html("Bilge Adam");
+            })
+
+            $("#iki").click(function () {
+                $(".metin").empty()
+                $(".metin").html("Bilgecik Adam");
+            })
+
+            $("#uc").click(function () {
+                $("p[class='metin']").empty()
+                $("p[class='metin']").html("Filtre Kahve")
+            })
+            $("#dort").click(function () {
+                $(".metin").empty()
+                $("p[lang!='tr']").html("Fıstıklı Baklava");
+            })
+            $("#bes").click(function () {
+                $(".metin").empty()
+                $("p[lang$='r']").html("Şöbiyet");
+            })
+            $("#alti").click(function () {
+                $(".metin").empty()
+            })
+
+            var timers = [];
+            $("p").click(function () {
+
+                $.each(timers, function () {
+                    clearInterval(value)
+                })
+
+                var items = document.getElementsByTagName("p");
+                var colors = [];
+                var index = 0;
+
+
+
+            var currentColor = $(this).css("backgroundColor"); /*this tıklamış olduğumuz nesneleri döner*/
+
+            for (var i = 0; i < items.length; i++) {
+                colors.push($(items[i]).css("backgroundColor"))
+            }
+            $("p").css("background-color", "white");
+
+            var timer1 = setInterval(function () {
+                $(items[index]).css("background-color", currentColor)
+                index++;
+                if (index == items.length) {
+                    clearInterval(timer1)
+                }
+            }, 100);
+
+                timers.push(timer1);
+
+                setTimeout(function () {
+
+                    index = 0;
+                    var timer2 = setInterval(function () {
+                        $(items[index]).css("background-color", colors[index])
+                        index++;
+                        if (index == items.length) {
+                            clearInterval(timer1)
+                        }
+                    }, 100)
+                    timers.push(timer2)
+                }, (items.length * 100) + 100)
+
+            })
+        })
+    })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12">
+
+
+
+                <p id="metin1"   lang="tr" class="metin" style="background-color:#FFDC00;"></p>
+                <p id="metin2"   lang="en" class="metin" style="background-color:#FF851B;"></p>
+                <p id="metin3"   lang="tr" class="metin" style="background-color:#FF4136;"></p>
+                <p id="BaMetin4" lang="fr" class="metin" style="background-color:#01FF70;"></p>
+                <p id="metin5"   lang="tr" class="metin" style="background-color:#F012BE;"></p>
+                <p id="BaMetin6" lang="en" class="metin" style="background-color:#39CCCC;"></p>
+            </div>
+
+
+            <div class="col-12">
+                <div class="btn-group btn-group-justified">
+                    <a id="bir"   class="btn btn-warning">Örnek Bir</a>
+                    <a id="iki"   class="btn btn-warning">Örnek İki</a>
+                    <a id="uc"    class="btn btn-warning">Örnek Üç</a>
+                    <a id="dort"  class="btn btn-warning">Örnek Dört</a>
+                    <a id="bes"   class="btn btn-warning">Örnek Beş</a>
+                    <a id="alti"  class="btn btn-warning">Örnek Altı</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
